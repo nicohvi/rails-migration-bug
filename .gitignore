@@ -28,7 +28,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /tmp
-/bin
 /vendor
 /public
 **/*.DS_STORE

@@ -15,12 +15,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_133652) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.bigint "category_id"
   end
 
   create_table "sections", force: :cascade do |t|

@@ -1,12 +1,14 @@
 class AddColorToSections < ActiveRecord::Migration[6.0]
-  def change
+  def up
     add_column :sections, :color, :string
 
-    Post
-      .find_each do |post|
-        section = post.sections.first
-        section.color = 'blue'
-        section.save!
-      end
+    Section.find_each do |section|
+      section.color = 'blue'
+      section.save!
+    end
+  end
+
+  def down
+    remove_column :sections, :color
   end
 end
